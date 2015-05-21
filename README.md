@@ -1,4 +1,4 @@
-tutum-docker-tomcat
+docker-tomcat
 ===================
 Base docker image to run a Tomcat application server
 
@@ -6,25 +6,23 @@ Base docker image to run a Tomcat application server
 Image tags
 ----------
 ```
-    tutum/tomcat:latest
-    tutum/tomcat:8.0
-    tutum/tomcat:7.0
-    tutum/tomcat:6.0
-    tutum/tomcat:5.5
-    tutum/tomcat:4.1
+    cloudesire/tomcat:latest
+    cloudesire/tomcat:8.0
+    cloudesire/tomcat:7.0
+    cloudesire/tomcat:6.0
 ```
 
 
 Usage
 -----
 
-To create the image `tutum/tomcat`, execute the following command on the tutum-docker-tomcat folder:
+To create the image `cloudesire/tomcat`, execute the following command on the cloudesire-docker-tomcat folder:
 
-    docker build -t tutum/tomcat .
+    docker build -t cloudesire/tomcat .
 
 To run the image and bind to port :
 
-    docker run -d -p 8080:8080 tutum/tomcat
+    docker run -d -p 8080:8080 cloudesire/tomcat
 
 
 The first time that you run your container, a new user `admin` with all privileges 
@@ -57,7 +55,7 @@ Setting a specific password for the admin account
 If you want to use a preset password instead of a random generated one, you can
 set the environment variable `TOMCAT_PASS` to your specific password when running the container:
 
-    docker run -d -p 8080:8080 -e TOMCAT_PASS="mypass" tutum/tomcat
+    docker run -d -p 8080:8080 -e TOMCAT_PASS="mypass" cloudesire/tomcat
 
 You can now test your deployment:
 
@@ -65,4 +63,4 @@ You can now test your deployment:
 
 Done!
 
-**by http://www.tutum.co**
+**by http://www.cloudesire.com**
