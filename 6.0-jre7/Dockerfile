@@ -1,13 +1,13 @@
-FROM tifayuki/java:7
-MAINTAINER Feng Honglin <hfeng@tutum.co>
+FROM cloudesire/java:7
+MAINTAINER ClouDesire <dev@cloudesire.com>
 
 RUN apt-get update && \
     apt-get install -yq --no-install-recommends wget pwgen ca-certificates && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ENV TOMCAT_MAJOR_VERSION 8
-ENV TOMCAT_MINOR_VERSION 8.0.11
+ENV TOMCAT_MAJOR_VERSION 6
+ENV TOMCAT_MINOR_VERSION 6.0.44
 ENV CATALINA_HOME /tomcat
 
 # INSTALL TOMCAT
