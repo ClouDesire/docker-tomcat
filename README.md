@@ -1,24 +1,21 @@
 docker-tomcat
 ===================
-Base docker image to run a Tomcat application server
+Base docker image to run a Tomcat application server from 6.0 to 8.0, with jre7 or jre8.
 
 
 Image tags
 ----------
 ```
     cloudesire/tomcat:latest
-    cloudesire/tomcat:8.0
-    cloudesire/tomcat:7.0
-    cloudesire/tomcat:6.0
+    cloudesire/tomcat:8.0-jre8
+    cloudesire/tomcat:7.0-jre8
+    cloudesire/tomcat:7.0-jre7
+    cloudesire/tomcat:6.0-jre7
 ```
 
 
 Usage
 -----
-
-To create the image `cloudesire/tomcat`, execute the following command on the cloudesire-docker-tomcat folder:
-
-    docker build -t cloudesire/tomcat .
 
 To run the image and bind to port :
 
