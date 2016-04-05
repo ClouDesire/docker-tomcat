@@ -10,7 +10,7 @@ RUN apt-get update && \
 ENV TOMCAT_MAJOR_VERSION 8
 ENV TOMCAT_MINOR_VERSION 8.0.22
 ENV CATALINA_HOME /tomcat
-ENV MAX_HEAP_SIZE_MB 1024
+ENV JAVA_OPTS
 
 # INSTALL TOMCAT
 RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION}/v${TOMCAT_MINOR_VERSION}/bin/apache-tomcat-${TOMCAT_MINOR_VERSION}.tar.gz && \
