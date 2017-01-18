@@ -8,7 +8,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 ENV TOMCAT_MAJOR_VERSION 7
-ENV TOMCAT_MINOR_VERSION 7.0.62
+ENV TOMCAT_MINOR_VERSION 7.0.73
 ENV CATALINA_HOME /tomcat
 ENV JAVA_OPTS ""
 
