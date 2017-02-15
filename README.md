@@ -1,16 +1,16 @@
 docker-tomcat
-===================
+==============
 Base docker image to run a Tomcat application server from 6.0 to 8.0, with jre7 or jre8.
 
 
-Image tags
-----------
+Available tags
+--------------
+
 ```
-    cloudesire/tomcat:latest
-    cloudesire/tomcat:8.0-jre8
-    cloudesire/tomcat:7.0-jre8
-    cloudesire/tomcat:7.0-jre7
-    cloudesire/tomcat:6.0-jre7
+cloudesire/tomcat:8-jre8
+cloudesire/tomcat:7-jre8
+cloudesire/tomcat:7-jre7
+cloudesire/tomcat:6-jre7
 ```
 
 
@@ -19,7 +19,7 @@ Usage
 
 To run the image and bind to port :
 
-    docker run -d -p 8080:8080 cloudesire/tomcat
+    docker run -d -p 8080:8080 cloudesire/tomcat:7-jre8
 
 
 The first time that you run your container, a new user `admin` with all privileges
@@ -63,7 +63,5 @@ Done!
 Environment variables
 ---------------------
 
-* JAVA_OPTS: set additionals java options
-* TOMCAT_BIND_ON_INIT: change bindOnInit parameter on the HTTP connector (default true)
-
-**by http://www.cloudesire.com**
+* `JAVA_OPTS`: set additionals java options (default empty, e.g. `JAVA_OPTS=-Xmx2048m`)
+* `TOMCAT_BIND_ON_INIT`: change bindOnInit parameter on the HTTP connector (default `TOMCAT_BIND_ON_INIT=true`)
