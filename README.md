@@ -22,7 +22,7 @@ To run the image and bind to port :
     docker run -d -p 8080:8080 cloudesire/tomcat
 
 
-The first time that you run your container, a new user `admin` with all privileges 
+The first time that you run your container, a new user `admin` with all privileges
 will be created in Tomcat with a random password. To get the password, check the logs
 of the container by running:
 
@@ -59,5 +59,11 @@ You can now test your deployment:
     http://127.0.0.1:8080/
 
 Done!
+
+Environment variables
+---------------------
+
+* JAVA_OPTS: set additionals java options
+* TOMCAT_BIND_ON_INIT: change bindOnInit parameter on the HTTP connector (default true)
 
 **by http://www.cloudesire.com**
